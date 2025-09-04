@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WrestlingShop - Pago</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="pagina-checkout">
+    <section class="checkout-container">
+        <h2>Finalizar Compra</h2>
+
+        <form id="form-pago">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" required>
+
+            <label for="direccion">Dirección de envío:</label>
+            <input type="text" id="direccion" required>
+
+            <label for="tarjeta">Número de tarjeta:</label>
+            <input type="text" id="tarjeta" maxlength="16" required>
+
+            <label for="vencimiento">Fecha de vencimiento (MM/AA):</label>
+            <input type="text" id="vencimiento" placeholder="MM/AA" required>
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" maxlength="3" required>
+
+            <button type="submit">Pagar</button>
+        </form>
+    </section>
+
+    <script>
+        document.getElementById('form-pago').addEventListener('submit', function(e){
+            e.preventDefault();
+            alert('Pago realizado con éxito. Gracias por tu compra!');
+            localStorage.removeItem('carrito');
+            window.location.href = "index.html";
+        });
+    </script>
+</body>
+</html>

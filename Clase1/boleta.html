@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boleta de Compra</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="unnamed.png" type="image/png" />
+
+</head>
+<body class="pagina-checkout">
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="unnamed.png" ></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+        </ul>
+    </nav>
+
+    <section id="boleta-container">
+        <h2>Boleta / Factura</h2>
+        <div id="boleta"></div>
+        <button onclick="window.print()">Imprimir / Descargar</button>
+    </section>
+
+    <script>
+        const cliente = JSON.parse(sessionStorage.getItem('cliente'));
+        const productos = JSON.parse(sessionStorage.getItem('boletaProductos')) || [];
+        const boletaDiv = document.getElementById('boleta');
+
+        if(cliente && productos.length > 0){
+            let total = 0;
+            let html = '';
+
+            productos.forEach(p => {
+                total += p.precio * p.cantidad;
+                html += `
+                <div class="producto-boleta">
+                    <img src="${p.imagen}" alt="${p.nombre}">
+                    <div class="detalle-producto-boleta">
+                        <p><strong>Producto:</strong> ${p.nombre}</p>
+                        <p><strong>Cantidad:</strong> ${p.cantidad}</p>
+                        <p><strong>Precio unitario:</strong> $${p.precio}</p>
+                        <p><strong>Subtotal:</strong> $${p.precio * p.cantidad}</p>
+                        <p><strong>Cliente:</strong> ${cliente.nombre}</p>
+                        <p><strong>Dirección de envío:</strong> ${cliente.direccion}</p>
+                        <p><strong>Total:</strong> $${total}</p>
+                    </div>
+                </div>`;
+            });
+
+            
+
+            boletaDiv.innerHTML = html;
+        } else {
+            boletaDiv.innerHTML = "<p>No hay información de la compra.</p>";
+        }
+    </script>
+</body>
+</html>
