@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="unnamed.png" type="image/png" />
+    <title>WrestlingShop</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="unnamed.png" alt="Logo" />
+        </div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#nosotros">Acerca de nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <div class="carrito">
+                <a href="carrito.html" title="Ver carrito" > 🛒 <span class="contador">0</span></a>
+            </div>
+        </ul>
+    </nav>
+
+    <section id="inicio" class="inicio">
+        <video autoplay muted loop class="video-fondo">
+            <source src="wrest.mp4" type="video/mp4" />
+            Tu navegador no soporta el video.
+        </video>
+        <div class="contenido-texto-inicio">
+            <center><h1 class="titulo1">BIENVENIDOS</h1></center>
+            <center><h1 class="titulo2">A</h1></center>
+            <center><h1 class="titulo3">WRESTLINGSHOP</h1></center>
+            <p>Equipamiento original y de calidad para los verdaderos luchadores.</p>
+        </div>
+    </section>
+
+    <section id="productos" class="productos">
+        <div class="contenido-texto-productos">
+            <center>
+                <h2>Nuestros Productos</h2>
+                <p>Nike, Rudis, Cliff Keen</p>
+            </center>
+
+            <div class="grid-productos">
+                <div class="producto">
+                    <img src="producto1.jpg" alt="Nike Tawa" />
+                    <h3>Nike Tawa</h3>
+                    <p>$180.000 CLP</p>
+                    <button class="agregar-carrito" data-nombre="Nike Tawa" data-precio="180000" data-imagen="producto1.jpg">Agregar al carrito</button>
+                </div>
+
+                <div class="producto">
+                    <img src="producto2.jpg" alt="Nike Inflict SE" />
+                    <h3>Nike Inflict SE</h3>
+                    <p>$200.000 CLP</p>
+                    <button class="agregar-carrito" data-nombre="Nike Inflict SE" data-precio="200000" data-imagen="producto2.jpg">Agregar al carrito</button>
+                </div>
+
+                <div class="producto">
+                    <img src="producto3.jpg" alt="Nike Inflict Blue" />
+                    <h3>Nike Inflict Blue</h3>
+                    <p>$185.000 CLP</p>
+                    <button class="agregar-carrito" data-nombre="Nike Inflict Blue" data-precio="185000" data-imagen="producto3.jpg">Agregar al carrito</button>
+                </div>
+
+                <div class="producto">
+                    <img src="producto4.jpg" alt="USAW Icon 2.0 Elite Singlet" />
+                    <h3>USAW Icon 2.0 Elite Singlet</h3>
+                    <p>$85.000 CLP</p>
+                    <button class="agregar-carrito" data-nombre="USAW Icon 2.0 Elite Singlet" data-precio="85000" data-imagen="producto4.jpg">Agregar al carrito</button>
+                </div>
+
+                <div class="producto">
+                    <img src="producto5.jpg" alt="USAW Icon 2.0 Elite Singlet" />
+                    <h3>USAW Icon 2.0 Elite Singlet</h3>
+                    <p>$85.000 CLP</p>
+                    <button class="agregar-carrito" data-nombre="USAW Icon 2.0 Elite Singlet" data-precio="85000" data-imagen="producto5.jpg">Agregar al carrito</button>
+                </div>
+
+                <div class="producto">
+                    <img src="producto6.jpg" alt="USAW Icon 2.0 Elite Singlet" />
+                    <h3>USAW Icon 2.0 Elite Singlet</h3>
+                    <p>$85.000 CLP</p>
+                    <button class="agregar-carrito" data-nombre="USAW Icon 2.0 Elite Singlet" data-precio="85000" data-imagen="producto6.jpg">Agregar al carrito</button>
+                </div>
+
+                <div class="producto">
+                    <img src="producto7.jpg" alt="Headgear Blue" />
+                    <h3>Headgear Blue</h3>
+                    <p>$48.500 CLP</p>
+                    <button class="agregar-carrito" data-nombre="Headgear Blue" data-precio="48500" data-imagen="producto7.jpg">Agregar al carrito</button>
+                </div>
+
+                <div class="producto">
+                    <img src="producto8.jpg" alt="Headgear White" />
+                    <h3>Headgear White</h3>
+                    <p>$48.500 CLP</p>
+                    <button class="agregar-carrito" data-nombre="Headgear White" data-precio="48500" data-imagen="producto8.jpg">Agregar al carrito</button>
+                </div>
+
+                <div class="producto">
+                    <img src="producto9.jpg" alt="Headgear Red" />
+                    <h3>Headgear Red</h3>
+                    <p>$48.500 CLP</p>
+                    <button class="agregar-carrito" data-nombre="Headgear Red" data-precio="48500" data-imagen="producto9.jpg">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="nosotros" class="nosotros">
+        <div class="contenido-texto-nosotros">
+            <h2>Acerca de Nosotros</h2>
+            <p>
+                En <strong>WrestlingShop</strong> nos dedicamos con pasión al mundo del Wrestling.
+                Sabemos lo complicado que resulta encontrar equipamiento y productos originales de calidad,
+                especialmente en un mercado donde muchas veces lo que buscamos no está disponible.
+            </p>
+            <p>
+                Por eso nace nuestra tienda: con el compromiso de acercar a fanáticos y luchadores todo lo necesario
+                para entrenar, competir y vivir al máximo esta disciplina.
+            </p>
+            <p>
+                Lo que nos diferencia es que no somos solo vendedores, <strong>también somos luchadores</strong>.
+                Compartimos la misma pasión, los mismos desafíos y esa sensación de querer contar siempre
+                con más y mejores productos.
+            </p>
+            <p>
+                En WrestlingShop trabajamos día a día para seleccionar, importar y poner a tu alcance
+                productos confiables y de gran calidad, siempre con la visión de fortalecer la comunidad del Wrestling
+                en nuestro país.
+            </p>
+            <p>
+                Queremos que al entrar a nuestra tienda sientas que llegaste al lugar correcto:
+                un espacio creado por luchadores y para luchadores.
+            </p>
+        </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+        <div class="contenido-texto-contacto">
+            <h2>Contacto</h2>
+            <p>¡Estamos para ayudarte! Escríbenos por cualquiera de nuestros medios:</p>
+            <ul class="contacto-lista">
+                <li>📱 <a href="https://wa.me/5491123456789" target="_blank">WhatsApp</a></li>
+                <li>📷 <a href="https://instagram.com/insaggi.wrest" target="_blank">@insaggi.wrest</a></li>
+                <li>📧 <a href="mailto:correo@wrestlingshop.com">correo@wrestlingshop.com</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <script src="carrito.js"></script>
+
+    <script>
+        if (!sessionStorage.getItem('reloaded')) {
+            sessionStorage.setItem('reloaded', 'true');
+            location.reload();
+        } else {
+            sessionStorage.removeItem('reloaded');
+        }
+    </script>
+
+</body>
+</html>
